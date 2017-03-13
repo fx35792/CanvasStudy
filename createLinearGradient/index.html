@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>createLinearGradient(线性渐变)</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="300" style="border: 1px solid #ccc"></canvas>
+    <script type="text/javascript">
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+
+    //创建渐变颜色
+    gradient = ctx.createLinearGradient(0, 0, 170, 170); //x开始，y开始，x结束，y结束
+    gradient.addColorStop(0, 'black');//渐变最初的颜色为黑色
+    gradient.addColorStop(1, 'white');//渐变最后的颜色为白色
+    ctx.fillStyle = gradient;//将生成的渐变色进行填充
+
+    //绘制矩形
+    ctx.fillRect(20, 20, 170, 100); //距左20，距顶20，宽度170，高度100
+    </script>
+</body>
+
+</html>

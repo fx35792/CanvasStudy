@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>strokeStyle</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="300" width="300" style="border: 1px solid #ccc"></canvas>
+    <script type="text/javascript">
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+
+    //矩形边框颜色 （红色）
+    // ctx.strokeStyle = 'red'; //添加颜色
+    // ctx.strokeRect(20, 20, 150, 100); //画矩形
+
+    //矩形框颜色渐变 （黑--红--蓝）
+    var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+    gradient.addColorStop(0, 'black');
+    gradient.addColorStop(0.5, 'red');
+    gradient.addColorStop(1, 'blue');
+
+    ctx.strokeStyle = gradient; //添加渐变色
+    ctx.lineWidth = 5; //矩形框厚度
+    ctx.strokeRect(20, 20, 150, 100); //画矩形
+    </script>
+</body>
+
+</html>

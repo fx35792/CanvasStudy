@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shadowColor,shadowBlur,shadowOffsetX,showdowOffsetY</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="300" style="border: 1px solid #ccc"></canvas>
+    <script type="text/javascript">
+    /*
+    	1.shadowColor:阴影颜色
+		2.shadowBlur:阴影的模糊度
+		3.shadowOffsetX:阴影向右偏移的距离（距离左侧的距离）
+		4.shadowOffsetY:阴影向下偏移的距离（距离顶部的距离）
+     */
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    ctx.fillStyle = 'blue';
+    ctx.shadowColor = 'black'; //阴影的颜色
+    ctx.shadowBlur = 30; //模糊度
+    // ctx.shadowOffsetX = 10; //水平向右偏移10
+    ctx.shadowOffsetX = -10; //水平向左偏移10
+    // ctx.shadowOffsetY = 10; //垂直向下偏移10
+    ctx.shadowOffsetY = -10 //垂直向上偏移10
+    ctx.fillRect(50, 100, 150, 80);//左，上，宽，高
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>strokeText</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="150" style="border: 1px solid #ccc"></canvas>
+    <script type="text/javascript">
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    ctx.font = '30px Verdana';
+    var gradient = ctx.createLinearGradient(0, 10, myCanvas.width, 0);
+    gradient.addColorStop(0, 'magenta');
+    gradient.addColorStop(0.5, 'blue');
+    gradient.addColorStop(1, 'red');
+    ctx.strokeStyle = gradient;
+    ctx.strokeText('sunnyfanfan.com', 10, 50);//内容，左，上
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>createPattern(重复指定元素)</title>
+</head>
+
+<body>
+    <p>
+        <img src="lamp.gif" id="lamp">
+    </p>
+    <canvas id="myCanvas" width="300" height="300" style="border:1px solid #ccc;display: block;"></canvas>
+    <script type="text/javascript">
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+    ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+    var img = document.getElementById('lamp');
+    img.onload = function() {
+        var path = ctx.createPattern(img, "repeat-y");
+        ctx.fillStyle = path;
+        ctx.fillRect(0, 0, 190, 95);
+    }
+    </script>
+</body>
+
+</html>

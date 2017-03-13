@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fillStyle</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" style="width:300px;height:300px;border:1px solid #ccc"></canvas>
+    <script type="text/javascript">
+    var myCanvas = document.getElementById('myCanvas');
+    var ctx = myCanvas.getContext('2d');
+
+    //绘制矩形
+    // ctx.fillStyle = '#000000';
+    // ctx.fillRect(20, 20, 150, 100); 
+
+    //绘制从上到下的渐变矩形（黑---白）
+    // var gradient = ctx.createLinearGradient(0, 0, 0, 170);
+    // gradient.addColorStop(0, 'black');
+    // gradient.addColorStop(1, 'white');
+    // ctx.fillStyle = gradient;
+    // ctx.fillRect(20, 20, 150, 100);
+
+    //绘制从左到右的渐变矩形（黑---白）
+    // var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+    // gradient.addColorStop(0, 'black');
+    // gradient.addColorStop(1, 'white');
+    // ctx.fillStyle = gradient;
+    // ctx.fillRect(20, 20, 150, 100);
+
+    //绘制从左到右由渐变矩形（黑---红---白）
+    var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+    gradient.addColorStop(0, 'black');
+    gradient.addColorStop(0.5, 'red');
+    gradient.addColorStop(1, 'white');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(20, 20, 150, 200);
+
+    </script>
+</body>
+
+</html>
